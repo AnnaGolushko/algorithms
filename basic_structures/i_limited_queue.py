@@ -8,7 +8,7 @@ class Queue:
 
     def is_empty(self):
         return self.size == 0
-    
+
     def push(self, x):
         if self.size != self.max_n:
             self.queue[self.tail] = x
@@ -25,21 +25,22 @@ class Queue:
         self.head = (self.head + 1) % self.max_n
         self.size -= 1
         return x
-    
+
     def peek(self):
         if self.is_empty():
             return None
         x = self.queue[self.head]
         return x
-    
-    def queue_size(self): 
+
+    def queue_size(self):
         return self.size
+
 
 if __name__ == '__main__':
     n = int(input())
     queue_max_size = int(input())
-    queue = Queue(queue_max_size)    
-    
+    queue = Queue(queue_max_size)
+
     for i in range(n):
         command = input().strip()
         if command == 'size':
