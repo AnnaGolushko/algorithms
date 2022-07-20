@@ -76,6 +76,14 @@ class Deque:
         return x
 
 
+# def run_deque_method(deque, command):
+#     cmd, *args = command.split()
+#     action = getattr(Deque, cmd)
+#     try:
+#         return action(deque) if not args else action(deque, args[0])
+#     except (EmptyDequeError, DequeIsFullError):
+#         return 'error'
+
 if __name__ == '__main__':
     count_commands = int(input())
     deque_size = int(input())
