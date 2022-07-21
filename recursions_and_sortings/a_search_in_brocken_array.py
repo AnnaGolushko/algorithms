@@ -33,5 +33,7 @@ def broken_search(nums, target) -> int:
 
 
 if __name__ == "__main__":
-    arr = [19, 21, 100, 101, 1, 4, 5, 7, 12, 14, 15, 16, 17]
-    print(broken_search(arr, 4))
+    n = int(input())
+    target = int(input())
+    arr = [int(symbol) for symbol in input().strip().split()]
+    print(broken_search(arr, target))
